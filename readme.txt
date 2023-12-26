@@ -18,4 +18,4 @@ go mod tidy
 Note: Generated a personal access token with perms to do releases.
 
 git tag -a v0.1 -m "initial"
-git push tags
+git push origin --tags
