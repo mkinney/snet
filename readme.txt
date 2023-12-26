@@ -17,7 +17,11 @@ go mod tidy
 
 Note: Generated a personal access token with perms to do releases.
 
-git tag -a v0.1 -m "initial"
+workflow:
+- commit changes
+- tag release
+git tag -a v0.2 -m "v0.2"
 git push origin --tags
+- create a release in GitHub for that tag
+git push
 
-create a release off the dev tag first
