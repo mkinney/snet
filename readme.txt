@@ -9,6 +9,8 @@ go run tc.go 127.0.0.1:1234
 send "Hello!"
 send "STOP"
 
+# Note: Same works with "us" and "uc".
+
 # initial
 go mod init github.com/mkinney/snet
 go mod tidy
