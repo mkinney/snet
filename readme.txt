@@ -3,9 +3,9 @@ inspired by: https://www.linode.com/docs/guides/developing-udp-and-tcp-clients-a
 
 # trying tcp server
 # start server
-go run ts.go 1234
+go run main.go -port=1234
 # start client
-go run tc.go 127.0.0.1:1234
+go run main.go -client -host=127.0.0.1 -port=1234
 send "Hello!"
 send "STOP"
 
