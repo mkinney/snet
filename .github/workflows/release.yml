@@ -28,6 +28,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
-        project_path: "./cmd/tc"
+        project_path: "tc"
         binary_name: "tc"
         asset_name: "tc-${{ matrix.goos }}-${{ matrix.goarch }}"
