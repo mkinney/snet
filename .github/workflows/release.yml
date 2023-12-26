@@ -28,5 +28,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
-        build_command: "go build tc.go"
+        project_path: "./cmd/tc/tc"
         asset_name: "tc-${{ matrix.goos }}-${{ matrix.goarch }}"

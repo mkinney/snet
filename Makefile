@@ -6,19 +6,19 @@ fmt:
 	go fmt ./...
 
 build:
-	go build tc.go
-	go build ts.go
-	go build uc.go
-	go build us.go
+	cd cmd/tc; go build
+	cd cmd/ts; go build
+	cd cmd/uc; go build
+	cd cmd/us; go build
 
 clean:
-	@rm tc ts uc us 2> /dev/null || true
+	@rm cmd/tc/tc cmd/ts/ts cmd/uc/uc cmd/us/us 2> /dev/null || true
 
 lint:
-	golangci-lint run tc.go
-	golangci-lint run ts.go
-	golangci-lint run uc.go
-	golangci-lint run us.go
+	golangci-lint run cmd/tc/tc.go
+	golangci-lint run cmd/ts/ts.go
+	golangci-lint run cmd/uc/uc.go
+	golangci-lint run cmd/us/us.go
 
 FORCE: ;
 
