@@ -28,7 +28,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
-        project_path: "tc"
         build_command: "go build tc"
         binary_name: "tc"
     - uses: wangyoucao577/go-release-action@v1
@@ -36,6 +35,5 @@ jobs:
         github_token: ${{ secrets.TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
-        project_path: "ts"
         build_command: "go build ts"
         binary_name: "ts"
