@@ -29,4 +29,4 @@ jobs:
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
         build_command: "go build tc.go"
-	binary_name: "tc"
+        binary_name: "tc"
