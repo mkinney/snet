@@ -28,12 +28,12 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
-        build_command: "go build tc"
+        build_command: "go build tc.go"
         binary_name: "tc"
     - uses: wangyoucao577/go-release-action@v1
       with:
         github_token: ${{ secrets.TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
-        build_command: "go build ts"
+        build_command: "go build ts.go"
         binary_name: "ts"
