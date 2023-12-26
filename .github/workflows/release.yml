@@ -1,5 +1,3 @@
-# .github/workflows/release.yaml
-
 on:
   push:
     branches:
@@ -10,21 +8,12 @@ permissions:
     packages: write
 
 jobs:
-  releases-matrix:
-    name: Release Go Binary
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # build and publish in parallel: linux/amd64, linux/arm64, windows/amd64, darwin/amd64, darwin/arm64
-        goos: [linux, windows, darwin]
-        goarch: [amd64, arm64]
-        exclude:
-          - goarch: arm64
-            goos: windows
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-go@v4
       with:
         go-version: stable
-    - name: Build tc
-      run: cd tc; go build
+    - name: Build
+      run: make build
