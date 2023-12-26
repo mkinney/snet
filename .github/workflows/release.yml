@@ -28,4 +28,5 @@ jobs:
         goarch: ${{ matrix.goarch }}
         asset_name: "snet-${{ matrix.goos }}-${{ matrix.goarch }}"
         release_tag: dev
+        release_name: dev
         overwrite: true
