@@ -27,4 +27,4 @@ jobs:
       with:
         go-version: stable
     - name: Build tc
-	run: cd tc; go build
+      run: cd tc; go build
