@@ -15,3 +15,5 @@ send "STOP"
 go mod init github.com/mkinney/snet
 go mod tidy
 
+Note: Generated a personal access token with perms to do releases.
+
