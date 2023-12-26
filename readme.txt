@@ -19,3 +19,5 @@ Note: Generated a personal access token with perms to do releases.
 
 git tag -a v0.1 -m "initial"
 git push origin --tags
+
+create a release off the dev tag first
