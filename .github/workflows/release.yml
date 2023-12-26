@@ -28,5 +28,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
-        build_command: "go build tc.go; go build ts.go; go build uc.go; go build us.go"
-        extra_files: readme.txt tc ts uc us
+        build_command: "go build tc.go"
+	binary_name: "tc"
