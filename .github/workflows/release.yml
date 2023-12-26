@@ -26,4 +26,3 @@ jobs:
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
         asset_name: "snet-${{ matrix.goos }}-${{ matrix.goarch }}"
-        overwrite: true
