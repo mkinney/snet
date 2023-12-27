@@ -172,11 +172,34 @@ func main() {
 	clientArg := flag.Bool("client", false, "Start as client (defaults as server)")
 	udpArg := flag.Bool("udp", false, "Use UDP (defaults to TCP)")
 
+  flag.Usage = func() {
+      w := flag.CommandLine.Output()
+      fmt.Fprintf(w, "Usage of %s: Simple network tool\n", os.Args[0])
+      fmt.Fprintf(w, "  Arguments:\n")
+      flag.PrintDefaults()
+      fmt.Fprintf(w, "\n")
+      fmt.Fprintf(w, "  Examples:\n")
+      fmt.Fprintf(w, "    1. Start up a TCP server on port 3000:\n")
+      fmt.Fprintf(w, "      snet -port 3000\n")
+      fmt.Fprintf(w, "\n")
+      fmt.Fprintf(w, "    2. Start up a TCP client on port 3000:\n")
+      fmt.Fprintf(w, "      snet -client -host 1.2.3.4 -port 3000\n")
+      fmt.Fprintf(w, "\n")
+      fmt.Fprintf(w, "    3. Start up a UDP server on port 3001:\n")
+      fmt.Fprintf(w, "      snet -udp -port 3001\n")
+      fmt.Fprintf(w, "\n")
+      fmt.Fprintf(w, "    4. Start up a UDP client on port 3001:\n")
+      fmt.Fprintf(w, "      snet -udp -client -host 1.2.3.4 -port 3001\n")
+  }
+
 	flag.Parse()
-	//fmt.Println("args:", flag.Args())
 
 	if *hostArg == "" {
 		fmt.Println("Warning: Host not provided")
+		return
+	}
+	if *portArg == "" {
+		fmt.Println("Warning: Port not provided")
 		return
 	}
 
