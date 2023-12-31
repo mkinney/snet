@@ -1,5 +1,15 @@
 Simple network TCP or UDP client and server utility. Used for validation that the host and port is open. (i.e., not blocked by firewalls)
 
+Note: This is a repo to test out various things. If you really want a utility to test tcp and udp connections, check out *netcat*.
+Start tcp server:
+  nc -l 1234
+Start tcp client:
+  nc 127.0.01 1234
+Start udp server:
+  nc -l 1235 -u
+Start udp client:
+  nc 127.0.01 1235 -u
+
 Start TCP server:
   snet -port 3000
 Start TCP client:
