@@ -61,4 +61,5 @@ See these other repos:
 https://github.com/mkinney/snet_win To build nupkg file that can be used for a Windows Chocolatey install 
 https://github.com/mkinney/snet_rpm To build rpm package for Red Hat based linux systems
 https://github.com/mkinney/snet_packer To build an Ubuntu based docker image with snet installed
+https://github.com/mkinney/snet_apt To build apt package for Ubuntu
 
