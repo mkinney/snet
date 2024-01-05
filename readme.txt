@@ -56,3 +56,9 @@ git push origin --tags
 - create a release in GitHub for that tag
 git push
 
+
+See these other repos:
+https://github.com/mkinney/snet_win To build nupkg file that can be used for a Windows Chocolatey install 
+https://github.com/mkinney/snet_rpm To build rpm package for Red Hat based linux systems
+https://github.com/mkinney/snet_packer To build an Ubuntu based docker image with snet installed
+
